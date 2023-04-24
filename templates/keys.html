@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>API Key Management</title>
+    <!-- Include the Font Awesome CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Include the style sheet for the template -->
+    <link rel="stylesheet" href="/static/css/ABC.css">
+</head>
+<body>
+    <!-- Use a layout with a fixed header and a scrollable content area -->
+    <header>
+        <h1>API Key Management</h1>
+    </header>
+    <main>
+        <!-- Use a list to display the list of keys -->
+        <ul>
+            <!-- Use Jinja templates to create a list item for each key -->
+            {% for key in keys %}
+                <li>
+                    <!-- Use the i element and the fa-check class from Font Awesome for the checkmark icon -->
+                    <i class="fa fa-check"> </i> {{ key }}
+                    <!-- Add a delete button for each key using a Font Awesome icon -->
+                    <form method="post">
+                        <input type="hidden" name="key" value="{{ key }}">
+                        <input type="hidden" name="action" value="delete">
+                        <!-- Use the i element and the fa-trash class from Font Awesome -->
+                        <button type="submit"><i class="fa fa-trash"></i></button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+        <!-- Use a form to add new keys -->
+        <form method="post">
+            <label for="key">Add Key:</label>
+            <input type="text" name="key" id="key" required>
+            <input type="hidden" name="action" value="add">
+            <!-- Use the button element and the i element and the fa-plus class from Font Awesome for the add button -->
+            <button type="submit"><i class="fa fa-plus"></i></button>
+        </form>
+    </main>
+</body>
+</html>
