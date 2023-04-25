@@ -1,5 +1,12 @@
 # API-funnel
-Example attack: http://127.0.0.1:7331/attack?key=bootuh!841&host=https://test.com/&port=443&time=65&method=HTTPS
+
+**URL Examples**
+```
+Attack Example: http://127.0.0.1:7331/attack?key=bootuh!841&host=https://test.com/&port=443&time=65&method=HTTPS
+Dashboard Example: http://127.0.0.1:7331/admin/keys?auth=master1337.%!
+Logs Example: http://127.0.0.1:7331/admin/logs?auth=master1337.%!
+```
+
 **GENERATE A NEW ENCRYPTION/DECRYPTION KEY IN API.PY!!**
 ##### Your encryption/decryption key for your logs can be found on line 17
 ```python
