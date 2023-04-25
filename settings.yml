@@ -5,6 +5,7 @@ config:
   - 127.0.0.1
   - .gov
   - .mil
+  - AS13335
   keys:
   - bootuh!841
   - hatemexicans22
