@@ -7,6 +7,7 @@ import yaml
 import requests
 import ipaddress
 import time
+import json
 from urllib.parse import urlparse
 from flask import Flask, send_file, request, jsonify, render_template, redirect
 from cryptography.fernet import Fernet,InvalidToken
@@ -71,6 +72,18 @@ def attack():
         url = urlparse(host)
         if url.scheme and url.netloc:
             is_valid_url = True
+
+    if not(is_valid_url):
+        resp = requests.get(f"https://ipwhois.app/json/{host}")
+        dats = json.loads(resp.text)
+        asn = dats['asn']
+        for asna in blacklisted_domains:
+            if asna in asn:
+                return jsonify(
+                error=True,
+                message="This ASN Is Blacklisted."
+                ), 451
+
 
     if not (is_valid_ip or is_valid_url):
         return jsonify(
