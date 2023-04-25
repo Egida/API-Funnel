@@ -27,7 +27,6 @@ fernet = Fernet(key)
 - [x] Json bootah response
 - [x] Max Attack Time
 - [x] Blacklist System
-
-- [ ] ASN Blacklist
+- [x] ASN Blacklist
 - [ ] Range blacklist
 - [ ] Concurrent System  
