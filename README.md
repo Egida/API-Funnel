@@ -28,5 +28,9 @@ fernet = Fernet(key)
 - [x] Max Attack Time
 - [x] Blacklist System
 - [x] ASN Blacklist
+
+## Planned :
 - [ ] Range blacklist
 - [ ] Concurrent System  
+- [ ] Faster Attack Times
+- [ ] Telegram Logs
