@@ -125,7 +125,7 @@ def attack():
 
             for url in urls:
                 apicount += 1
-                url = url.replace('<<host>>', host).replace('<<host>>', host).replace('<<port>>', str(port)).replace('<<time>>', str(duration))
+                url = url.replace('<<host>>', host).replace('<<port>>', str(port)).replace('<<time>>', str(duration))
                 ua = {'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'}
                 x = requests.get(url,headers = ua)
                 z = x.status_code
